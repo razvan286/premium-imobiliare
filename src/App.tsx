@@ -1,7 +1,12 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+// import "./App.css";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "@/pages";
+import NotFound from "@/pages/NotFound";
+import ApartmentDetail from "@/pages/ApartmentDetail";
 
 function App() {
   const [count, setCount] = useState(0);

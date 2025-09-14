@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Premium Real Estate Design System */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 @layer base {
   :root {
@@ -48,9 +48,21 @@
     --radius: 0.75rem;
 
     /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-muted)));
-    --gradient-surface: linear-gradient(180deg, hsl(var(--surface)), hsl(var(--surface-dark)));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-light))
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(var(--accent)),
+      hsl(var(--accent-muted))
+    );
+    --gradient-surface: linear-gradient(
+      180deg,
+      hsl(var(--surface)),
+      hsl(var(--surface-dark))
+    );
 
     /* Shadows */
     --shadow-soft: 0 2px 8px -2px hsl(var(--primary) / 0.1);
@@ -126,7 +138,12 @@
     @apply bg-background text-foreground font-inter;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-playfair;
   }
 }
@@ -162,7 +179,7 @@
 
   .image-overlay::after {
     @apply absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 transition-opacity duration-300;
-    content: '';
+    content: "";
   }
 
   .image-overlay:hover::after {

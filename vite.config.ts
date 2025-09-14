@@ -1,9 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import SupportedBrowsers from "vite-plugin-browserslist-useragent";
 import viteTsconfigPaths from "vite-tsconfig-paths";
+import browserslistToEsbuild from "browserslist-to-esbuild";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
