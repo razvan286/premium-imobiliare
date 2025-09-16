@@ -10,10 +10,13 @@ interface LandPlotCardProps {
 
 const LandPlotCard = ({ landPlot }: LandPlotCardProps) => {
   const handleDownloadBrochure = () => {
-    if (landPlot.brochure) {
-      // In a real app, this would trigger a download
-      window.open(landPlot.brochure, "_blank");
-    }
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = landPlot.brochure; // e.g. "/brochures/plot123.pdf"
+    link.download = landPlot.brochure.split("/").pop() || "brochure.pdf"; // default filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

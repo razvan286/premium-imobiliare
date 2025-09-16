@@ -27,6 +27,12 @@ const NavBar = () => {
             >
               Terenuri
             </Link>
+            <Link
+              to={isHome ? "#apartamente" : "/#apartamente"}
+              className="text-foreground hover:text-accent transition-colors"
+            >
+              Apartamente
+            </Link>
             <Link to={isHome ? "#contact" : "/#contact"}>
               <Button className="btn-premium">Contact</Button>
             </Link>

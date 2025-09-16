@@ -7,6 +7,10 @@ export interface LandPlot {
   image: string;
   brochure?: string; // PDF path
   features: string[];
+  technicalCharacteristics: string[];
+  functions: string[];
+  advantages: string[];
+  oportunities: string[];
   description: string;
   utilities: string[];
   zoning: string;

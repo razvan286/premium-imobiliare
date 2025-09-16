@@ -9,6 +9,7 @@ import NotFound from "@/pages/NotFound";
 import ApartmentDetail from "@/pages/ApartmentDetail";
 import NavBar from "./components/NavBar";
 import LandPlotDetail from "./pages/LandPlotDetail";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +27,8 @@ function App() {
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        {/* Footer */}
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   );

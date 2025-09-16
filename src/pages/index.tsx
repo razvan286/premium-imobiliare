@@ -39,28 +39,6 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Apartments Section */}
-      {/* <section id="apartments" className="py-20 bg-surface">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-playfair font-bold text-luxury mb-6">
-              Available Apartments
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Choose from our carefully curated selection of luxury apartments,
-              each designed with exceptional attention to detail and premium
-              finishes throughout.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {apartments.map((apartment: Apartment) => (
-              <ApartmentCard key={apartment.id} apartment={apartment} />
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Terenuri Section */}
       <section id="terenuri" className="py-20 bg-surface">
         <div className="container mx-auto px-6">
@@ -69,7 +47,7 @@ const Index = () => {
               Terenuri
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Descoperă terenuri de vanzare exclusive.
+              Descoperă terenuri de vanzare.
             </p>
           </div>
 
@@ -78,6 +56,26 @@ const Index = () => {
               <LandPlotCard key={landPlot.id} landPlot={landPlot} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Apartments Section */}
+      <section id="apartamente" className="py-20 bg-muted">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-playfair font-bold text-luxury mb-6">
+              Apartamente
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Disponibile în curând.
+            </p>
+          </div>
+
+          {/* <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {apartments.map((apartment: Apartment) => (
+              <ApartmentCard key={apartment.id} apartment={apartment} />
+            ))}
+          </div> */}
         </div>
       </section>
 
@@ -104,9 +102,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
