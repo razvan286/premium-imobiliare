@@ -20,6 +20,8 @@ const LandPlotDetail = () => {
       </div>
     );
   }
+
+  return <div>{landPlot.title}</div>;
 };
 
 export default LandPlotDetail;
