@@ -1,43 +1,46 @@
 import HeroSection from "@/components/HeroSection";
-import ApartmentCard from "@/components/ApartmentCard";
-import { apartments } from "@/data/apartments";
-import { Button } from "@/components/ui/button";
-import { Apartment } from "@/types/apartment";
+import { Phone } from "lucide-react";
+import Footer from "@/components/Footer";
+import { landPlots } from "@/data/landPlots";
+import LandPlotCard from "@/components/LandPlotCard";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Index = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.replace("#", "");
+
+    const scrollToId = () => {
+      const el = document.getElementById(id);
+      if (!el) return false;
+      // adjust for sticky navbar height (example: 72px)
+      const offset = 72;
+      const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+      return true;
+    };
+
+    // try immediately + retry short delays (in case element mounts after navigation)
+    if (scrollToId()) return;
+    const t1 = setTimeout(scrollToId, 50);
+    const t2 = setTimeout(scrollToId, 200);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [hash]);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Navigation Bar */}
-      <nav className="bg-white/95 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-playfair font-bold text-luxury">
-              Luxury Residences
-            </h2>
-            <div className="hidden md:flex items-center space-x-6">
-              <a
-                href="#apartments"
-                className="text-foreground hover:text-accent transition-colors"
-              >
-                Apartments
-              </a>
-              <a
-                href="#contact"
-                className="text-foreground hover:text-accent transition-colors"
-              >
-                Contact
-              </a>
-              <Button className="btn-premium">Schedule Visit</Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Apartments Section */}
-      <section id="apartments" className="py-20 bg-surface">
+      {/* <section id="apartments" className="py-20 bg-surface">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-playfair font-bold text-luxury mb-6">
@@ -56,28 +59,54 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-background">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-playfair font-bold text-luxury mb-8">
-            Ready to Find Your Perfect Home?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our sales team is ready to help you discover the apartment that
-            matches your lifestyle and preferences.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-premium text-lg px-10 py-4">
-              Contact Sales Team
-            </Button>
-            <Button variant="outline" className="text-lg px-10 py-4">
-              Download Brochure
-            </Button>
+      {/* Terenuri Section */}
+      <section id="terenuri" className="py-20 bg-surface">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-playfair font-bold text-luxury mb-6">
+              Terenuri
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Descoperă terenuri de vanzare exclusive.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {landPlots.map((landPlot) => (
+              <LandPlotCard key={landPlot.id} landPlot={landPlot} />
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-surface">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-playfair font-bold text-luxury mb-8">
+            Contact
+          </h2>
+          {/* <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Echipa noastră de vânzări este pregătită să te ajute să descoperi proprietatea 
+            care se potrivește stilului tău de viață și preferințelor tale.
+          </p> */}
+
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <div className="flex items-center gap-2 text-2xl font-bold text-accent">
+              <Phone className="w-6 h-6" />
+              <span>+40 729 536 731</span>
+            </div>
+
+            <p className="text-lg text-muted-foreground">
+              Contactează-ne pe WhatsApp pentru informații rapide.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

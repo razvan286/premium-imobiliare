@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "@/pages";
 import NotFound from "@/pages/NotFound";
 import ApartmentDetail from "@/pages/ApartmentDetail";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/apartment/:id" element={<ApartmentDetail />} />
