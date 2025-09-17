@@ -10,6 +10,8 @@ import ApartmentDetail from "@/pages/ApartmentDetail";
 import NavBar from "./components/NavBar";
 import LandPlotDetail from "./pages/LandPlotDetail";
 import Footer from "./components/Footer";
+import React from "react";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +21,7 @@ function App() {
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <NavBar />
         <Routes>
           <Route path="/" element={<Index />} />

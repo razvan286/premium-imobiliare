@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBuildingImage from "@/assets/hero-section.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -29,15 +30,20 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="btn-premium text-lg px-10 py-4">
-            Descoperă Opțiuni
-          </Button>
-          <Button
-            variant="outline"
-            className="text-primary text-lg px-10 py-4 hover:text-white"
-          >
-            Contact
-          </Button>
+          <Link to="#terenuri">
+            <Button className="btn-premium text-lg px-10 py-4">
+              Descoperă Opțiuni
+            </Button>
+          </Link>
+
+          <Link to="#contact">
+            <Button
+              variant="outline"
+              className="text-primary text-lg px-10 py-4 hover:text-white"
+            >
+              Contact
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,0 +1,92 @@
+name: Lint - Build - Deploy
+
+on:
+  pull_request:
+    branches: [main, staging]
+  push:
+    branches: [main, staging]
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: Select the environment
+        required: true
+        options:
+          - staging
+          - production
+
+jobs:
+  lint-build:
+    name: Frontend Linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm ci
+      - name: Lint
+        run: |
+          cd frontend
+          npm run lint
+      - name: Build
+        run: |
+          cd frontend
+          npm run build
+
+  build-and-deploy-staging:
+    # Run this job only when pushing to the staging branch
+    # The environment rules are set up in such way that 'staging' is the staging environment
+    if: github.ref == 'refs/heads/staging'
+    name: Deploy staging
+    runs-on: ubuntu-latest
+    needs: lint-build
+    environment:
+      name: Staging
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
+      - name: Build and push image
+        run: |
+          echo "${{ vars.VITE_FRONTEND_URL }}"
+          echo "${{ vars.FRONTEND_PORT }}"
+          docker build -f Dockerfile --build-arg PORT="${{ vars.FRONTEND_PORT }}" --build-arg VITE_FRONTEND_URL="${{ vars.VITE_FRONTEND_URL }}" --tag ghcr.io/razvan286/premium-imobiliare-${{ vars.ENVIRONMENT_NAME }}:latest .
+          docker push ghcr.io/razvan286/premium-imobiliare-${{ vars.ENVIRONMENT_NAME }}:latest
+
+  build-and-deploy-production:
+    # Run this job only when pushing to the main branch
+    if: github.ref == 'refs/heads/main'
+    name: Deploy production
+    runs-on: ubuntu-latest
+    needs: lint-build
+    environment:
+      name: Production
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
+
+      - name: Build and push image
+        run: |
+          echo "${{ vars.VITE_FRONTEND_URL }}"
+          echo "${{ vars.FRONTEND_PORT }}"
+          docker build -f Dockerfile --build-arg PORT="${{ vars.FRONTEND_PORT }}" --build-arg VITE_FRONTEND_URL="${{ vars.VITE_FRONTEND_URL }}" --tag ghcr.io/razvan286/premium-imobiliare-${{ vars.ENVIRONMENT_NAME }}:latest .
+          docker push ghcr.io/razvan286/premium-imobiliare-${{ vars.ENVIRONMENT_NAME }}:latest

@@ -1,0 +1,23 @@
+# Ignore node modules
+node_modules
+**/node_modules
+
+# Ignore build outputs
+dist
+build
+
+# Ignore git
+.git
+.gitignore
+
+# Ignore logs and cache
+npm-debug.log
+yarn-error.log
+*.log
+.cache
+*.tmp
+
+# Ignore editor/IDE files
+.vscode
+.idea
+.DS_Store
