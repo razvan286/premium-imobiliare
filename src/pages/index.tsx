@@ -70,12 +70,6 @@ const Index = () => {
               Disponibile în curând.
             </p>
           </div>
-
-          {/* <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {apartments.map((apartment: Apartment) => (
-              <ApartmentCard key={apartment.id} apartment={apartment} />
-            ))}
-          </div> */}
         </div>
       </section>
 
@@ -85,11 +79,6 @@ const Index = () => {
           <h2 className="text-4xl font-playfair font-bold text-luxury mb-8">
             Contact
           </h2>
-          {/* <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Echipa noastră de vânzări este pregătită să te ajute să descoperi proprietatea 
-            care se potrivește stilului tău de viață și preferințelor tale.
-          </p> */}
-
           <div className="flex flex-col items-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-2xl font-bold text-accent">
               <Phone className="w-6 h-6" />

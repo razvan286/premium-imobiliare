@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 leading-tight">
-          Proprietati
+          Proprietăți
           <br />
           <span className="text-accent">Premium</span>
         </h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button className="btn-premium text-lg px-10 py-4">
-            Descopera Optiuni
+            Descoperă Opțiuni
           </Button>
           <Button
             variant="outline"
@@ -40,23 +40,6 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
-      </div> */}
     </section>
   );
 };

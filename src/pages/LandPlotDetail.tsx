@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { landPlots } from "@/data/landPlots";
-import { Square } from "lucide-react";
+import { Download, Square } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 
 const LandPlotDetail = () => {
@@ -13,10 +13,10 @@ const LandPlotDetail = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-playfair font-bold mb-4">
-            Terenul cautat nu a fost gasit.
+            Terenul căutat nu a fost găsit.
           </h1>
           <Link to="/">
-            <Button className="btn-premium">Inapoi la Pagina Principala</Button>
+            <Button className="btn-premium">Inapoi la Pagina Principală</Button>
           </Link>
         </div>
       </div>
@@ -32,7 +32,7 @@ const LandPlotDetail = () => {
           <h1 className="text-5xl font-playfair font-bold text-luxury mb-4">
             {landPlot.title}
           </h1>
-          <div className="flex items-center gap-6 text-muted-foreground">
+          <div className="flex items-center text-muted-foreground">
             <div className="flex items-center gap-2">
               <Square className="w-5 h-5" />
               <span>{landPlot.surface}m²</span>
@@ -45,9 +45,6 @@ const LandPlotDetail = () => {
           <div className="lg:col-span-2 space-y-8">
             {/* Image Gallery */}
             <div className="space-y-4">
-              {/* <h2 className="text-2xl font-playfair font-semibold text-luxury">
-                Interior Views
-              </h2> */}
               <div className="grid gap-4">
                 <div className="image-overlay">
                   <img
@@ -68,12 +65,6 @@ const LandPlotDetail = () => {
                       €{landPlot.price.toLocaleString()}
                     </span>
                   </div>
-
-                  {/* <div className="space-y-3">
-                    <Button className="btn-premium w-full text-lg py-3">
-                      Contacteaza-ne
-                    </Button>
-                  </div> */}
                 </div>
               </CardContent>
             </Card>
@@ -177,7 +168,7 @@ const LandPlotDetail = () => {
                     <p className="font-medium">+40 729 536 731</p>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Adresa</span>
+                    <span className="text-muted-foreground">Adresă </span>
                     <p className="font-medium">Craiova, Romania</p>
                   </div>
                 </div>

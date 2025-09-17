@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { LandPlot } from "@/types/landPlot";
-import { MapPin, Download, TreePine } from "lucide-react";
+import { MapPin, Download, TreePine, Square } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface LandPlotCardProps {
