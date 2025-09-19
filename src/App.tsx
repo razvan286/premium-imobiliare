@@ -7,6 +7,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "@/pages";
 import NotFound from "@/pages/NotFound";
 import ApartmentDetail from "@/pages/ApartmentDetail";
+import NavBar from "./components/NavBar";
+import LandPlotDetail from "./pages/LandPlotDetail";
+import Footer from "./components/Footer";
+import React from "react";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,12 +21,17 @@ function App() {
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/apartment/:id" element={<ApartmentDetail />} />
+          <Route path="/apartamente/:id" element={<ApartmentDetail />} />
+          <Route path="/terenuri/:id" element={<LandPlotDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        {/* Footer */}
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   );
