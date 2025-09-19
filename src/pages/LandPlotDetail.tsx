@@ -102,7 +102,7 @@ const LandPlotDetail = () => {
             {/* Functions */}
             <div className="space-y-4 bg-muted p-3 rounded-lg">
               <h2 className="text-2xl font-playfair font-semibold text-luxury">
-                Funcțiuni aprobate:
+                Funcțiuni aprobate
               </h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {landPlot.functions.map((funct, index) => (
@@ -138,7 +138,7 @@ const LandPlotDetail = () => {
             {/* Oportunities */}
             <div className="space-y-4 bg-muted p-3 rounded-lg">
               <h2 className="text-2xl font-playfair font-semibold text-luxury">
-                Destinații posibile:
+                Destinații posibile
               </h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {landPlot.oportunities.map((oport, index) => (
