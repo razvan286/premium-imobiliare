@@ -120,8 +120,7 @@ export const landPlots: LandPlot[] = [
     ],
     urbanStatuses: [
       "Certificat de urbanism pentru construire, emis în mai 2025: S + P + 6 etaje",
-      "Regim de înălțime maxim admis prin PUG: P + 3 + 10 etaje",
-      "Conform PUG: regim maxim de înălțime admis : P+3+10 etaje, POT 20%, CUT 2,2",
+      "Regim de înălțime teren conform PUG: P + 3 + 10 etaje",
     ],
     functions: [
       "Parcaje subterane la nivelul subsolului",
