@@ -1,4 +1,3 @@
-import landPlot1 from "@/assets/teren-ai-cuza-1/poza1.jpeg";
 import landPlot2Image1 from "@/assets/teren-ai-cuza-2/foto1.jpg";
 import landPlot2Image2 from "@/assets/teren-ai-cuza-2/foto2.jpg";
 import landPlot2Image3 from "@/assets/teren-ai-cuza-2/foto3.jpg";
@@ -7,54 +6,10 @@ import landPlot3Image2 from "@/assets/teren-calea-bucuresti/plan-color-teren.jpg
 import { LandPlot } from "@/types/landPlot";
 
 export const landPlots: LandPlot[] = [
+  // Teren AI Cuza
   {
-    id: "teren-ai-cuza-1",
-    title: "Teren A.I. Cuza (1)",
-    subtitle: "Vis-a-vis de McDonald's",
-    surface: 470,
-    price: 470000,
-    location: "Str. Alexandru Ioan Cuza, Craiova",
-    mainImage: landPlot1,
-    images: [landPlot1],
-    brochure: "/brochures/teren-ai-cuza-1/conform-extrase-CU.pdf",
-    description:
-      "Oferim spre vânzare un teren amplasat într-o zonă centrală de excepție, chiar vis-a-vis de McDonald’s, pe strada Alexandru Ioan Cuza, una dintre cele mai circulate și căutate artere din oraș.",
-    features: [
-      "Deschidere la stradă: 16,5 ml",
-      "Localizare centrală",
-      "Vizibilitate maximă și trafic intens",
-      "Zonă consacrată pentru dezvoltări cu funcțiuni mixte",
-    ],
-    technicalCharacteristics: [
-      "Suprafață teren: 470 mp",
-      "Deschidere la stradă: 16,5 ml",
-    ],
-    urbanStatuses: [
-      "Certificat de urbanism: construire S + P + 5 etaje",
-      "Regim maxim de inaltime P=10",
-    ],
-    functions: [
-      "Spațiu comercial la parter",
-      "Locuințe colective la etajele 1–5",
-    ],
-    advantages: [
-      "Localizare centrală, în imediata apropiere a unui reper comercial major",
-      "Vizibilitate maximă și trafic intens – pietonal și auto",
-      "Zonă consacrată pentru dezvoltări cu funcțiuni mixte (comercial + rezidențial)",
-      "Posibilitate de realizare a unui proiect reprezentativ, cu randament ridicat",
-      "Posibilitate de extindere: teren vecin disponibil spre vânzare (470 mp), ceea ce permite o dezvoltare mai amplă, pe aproape 950 mp",
-    ],
-    oportunities: [
-      "Spațiu comercial modern la parter + apartamente premium la etaje",
-      "Un teren de excepție, cu amplasament strategic, ideal pentru dezvoltatori și investitori ce vizează proiecte de referință în centrul orașului.",
-    ],
-    zoning: "Central",
-    access: "Drum asfaltat - 8m lățime",
-  },
-  // Teren AI Cuza (2)
-  {
-    id: "teren-ai-cuza-2",
-    title: "Teren A.I. Cuza (2)",
+    id: "teren-ai-cuza",
+    title: "Teren A.I. Cuza",
     subtitle: "Vis-a-vis de McDonald's",
     surface: 470,
     price: 470000,
