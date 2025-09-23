@@ -117,6 +117,7 @@ export const landPlots: LandPlot[] = [
     technicalCharacteristics: [
       "Suprafață teren: 1920 mp",
       "Deschidere la stradă: 29 ml",
+      "Teren cu utilități existente: canalizare și gaz",
     ],
     urbanStatuses: [
       "Certificat de urbanism pentru construire, emis în mai 2025: S + P + 6 etaje",
