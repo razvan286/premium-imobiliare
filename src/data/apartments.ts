@@ -1,6 +1,4 @@
 import { Apartment } from "@/types/apartment";
-import apartmentBlueprint1 from "@/assets/apartment-blueprint1.png";
-import apartmentInterior1 from "@/assets/apartment-interior1.jpg";
 
 export const apartments: Apartment[] = [
   {
@@ -10,8 +8,8 @@ export const apartments: Apartment[] = [
     rooms: 1,
     floor: 3,
     price: 185000,
-    blueprint: apartmentBlueprint1,
-    images: [apartmentInterior1],
+    blueprint: "",
+    images: [],
     features: [
       "Open concept living",
       "Modern kitchen",
@@ -31,8 +29,8 @@ export const apartments: Apartment[] = [
     rooms: 2,
     floor: 5,
     price: 275000,
-    blueprint: apartmentBlueprint1,
-    images: [apartmentInterior1],
+    blueprint: "",
+    images: [],
     features: [
       "Separate bedroom",
       "Spacious living area",
@@ -52,8 +50,8 @@ export const apartments: Apartment[] = [
     rooms: 3,
     floor: 7,
     price: 395000,
-    blueprint: apartmentBlueprint1,
-    images: [apartmentInterior1],
+    blueprint: "",
+    images: [],
     features: [
       "Two bedrooms",
       "Large living room",
@@ -74,8 +72,8 @@ export const apartments: Apartment[] = [
     rooms: 4,
     floor: 12,
     price: 650000,
-    blueprint: apartmentBlueprint1,
-    images: [apartmentInterior1],
+    blueprint: "",
+    images: [],
     features: [
       "Panoramic views",
       "Private terrace",

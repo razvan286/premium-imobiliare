@@ -3,27 +3,19 @@ import { Button } from "@/components/ui/button";
 import { LandPlot } from "@/types/landPlot";
 import { MapPin, Download, TreePine, Square } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { handleDownloadBrochure } from "@/lib/utils";
 
 interface LandPlotCardProps {
   landPlot: LandPlot;
 }
 
 const LandPlotCard = ({ landPlot }: LandPlotCardProps) => {
-  const handleDownloadBrochure = () => {
-    // Create a temporary anchor element
-    const link = document.createElement("a");
-    link.href = landPlot.brochure; // e.g. "/brochures/plot123.pdf"
-    link.download = landPlot.brochure.split("/").pop() || "brochure.pdf"; // default filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <Card className="property-card bg-card border-border shadow-soft hover:shadow-medium">
       <div className="image-overlay">
         <img
-          src={landPlot.image}
+          src={landPlot.mainImage}
           alt={landPlot.title}
           className="w-full h-64 object-cover"
           loading="lazy"
@@ -33,9 +25,12 @@ const LandPlotCard = ({ landPlot }: LandPlotCardProps) => {
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-4">
           <div>
-            <h3 className="text-xl font-playfair font-semibold text-primary mb-2">
+            <h3 className="text-xl font-playfair font-semibold text-primary">
               {landPlot.title}
             </h3>
+            <div className="text-sm mb-3 text-gray-500">
+              {landPlot.subtitle}
+            </div>
             <div className="flex items-center text-muted-foreground mb-2">
               <MapPin className="w-4 h-4 mr-2" />
               <span className="text-sm">{landPlot.location}</span>
@@ -81,19 +76,26 @@ const LandPlotCard = ({ landPlot }: LandPlotCardProps) => {
         </div>
 
         <div className="flex gap-3">
-          <Link to={`/terenuri/${landPlot.id}`}>
-            <Button className="btn-premium flex-1">Vezi Detalii</Button>
+          <Link to={`/terenuri/${landPlot.id}`} className="flex-1">
+            <Button className="btn-premium w-full">Vezi Detalii</Button>
           </Link>
 
           {landPlot.brochure && (
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={handleDownloadBrochure}
-              className="shrink-0"
-            >
-              <Download className="w-4 h-4" />
-            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => handleDownloadBrochure(landPlot.brochure)}
+                  className="shrink-0"
+                >
+                  <Download className="w-4 h-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent className="text-muted-foreground text-xs">
+                Descarcă plan teren
+              </TooltipContent>
+            </Tooltip>
           )}
         </div>
       </CardContent>
