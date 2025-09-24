@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import { Phone } from "lucide-react";
-import Footer from "@/components/Footer";
 import { landPlots } from "@/data/landPlots";
 import LandPlotCard from "@/components/LandPlotCard";
 import { useLocation } from "react-router-dom";
