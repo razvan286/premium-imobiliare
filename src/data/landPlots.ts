@@ -1,8 +1,10 @@
 import landPlot2Image1 from "@/assets/teren-ai-cuza-2/foto1.jpg";
 import landPlot2Image2 from "@/assets/teren-ai-cuza-2/foto2.jpg";
 import landPlot2Image3 from "@/assets/teren-ai-cuza-2/foto3.jpg";
+import landPlot2Image4 from "@/assets/teren-ai-cuza-2/foto4-plan.jpeg";
 import landPlot3Image1 from "@/assets/teren-calea-bucuresti/foto1.jpg";
 import landPlot3Image2 from "@/assets/teren-calea-bucuresti/plan-color-teren.jpg";
+import landPlot3Image3 from "@/assets/teren-calea-bucuresti/foto2-plan.jpeg";
 import { LandPlot } from "@/types/landPlot";
 
 export const landPlots: LandPlot[] = [
@@ -15,7 +17,12 @@ export const landPlots: LandPlot[] = [
     price: 470000,
     location: "Str. Alexandru Ioan Cuza, Craiova",
     mainImage: landPlot2Image2,
-    images: [landPlot2Image2, landPlot2Image1, landPlot2Image3],
+    images: [
+      landPlot2Image2,
+      landPlot2Image1,
+      landPlot2Image3,
+      landPlot2Image4,
+    ],
     brochure: "/brochures/teren-ai-cuza-2/pozitionare-teren-google-maps.pdf",
     description:
       "Oferim spre vânzare un teren stradal de excepție, amplasat chiar vis-à-vis de McDonald’s, pe strada Alexandru Ioan Cuza – una dintre cele mai importante și circulate artere ale orașului. Un teren rarisim, cu suprafață compactă, ideal pentru dezvoltatori sau investitori interesați de un proiect de referință.",
@@ -59,7 +66,7 @@ export const landPlots: LandPlot[] = [
     price: 1600000,
     location: "Bvd. Calea București, Craiova",
     mainImage: landPlot3Image1,
-    images: [landPlot3Image1, landPlot3Image2],
+    images: [landPlot3Image1, landPlot3Image2, landPlot3Image3],
     brochure:
       "/brochures/teren-calea-bucuresti/pozitionare-teren-cb-google-maps.pdf",
     description:
