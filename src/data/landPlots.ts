@@ -25,7 +25,7 @@ export const landPlots: LandPlot[] = [
     ],
     brochure: "/brochures/teren-ai-cuza-2/pozitionare-teren-google-maps.pdf",
     description:
-      "Oferim spre vânzare un teren stradal de excepție, amplasat chiar vis-à-vis de McDonald’s, pe strada Alexandru Ioan Cuza – una dintre cele mai importante și circulate artere ale orașului. Un teren rarisim, cu suprafață compactă, ideal pentru dezvoltatori sau investitori interesați de un proiect de referință.",
+      "Oferim spre vânzare un teren stradal de excepție, amplasat chiar vis-à-vis de McDonald’s, pe strada Alexandru Ioan Cuza - una dintre cele mai importante și circulate artere ale orașului. Un teren rarisim, cu suprafață compactă, ideal pentru dezvoltatori sau investitori interesați de un proiect de referință.",
     features: [
       "Deschidere la stradă: 17 ml",
       "Flexibilitate urbanistică",

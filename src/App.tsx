@@ -11,6 +11,7 @@ import LandPlotDetail from "./pages/LandPlotDetail";
 import Footer from "./components/Footer";
 
 import ScrollToTop from "./components/ScrollToTop";
+import RetailSpaceDetail from "./pages/RetailSpaceDetail";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/apartamente/:id" element={<ApartmentDetail />} />
           <Route path="/terenuri/:id" element={<LandPlotDetail />} />
+          <Route path="/spatii/:id" element={<RetailSpaceDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
