@@ -41,12 +41,12 @@ const BuildingCard = ({ building }: BuildingCardProps) => {
           <span className="text-sm">{building.location}</span>
         </div>
 
-        <div className="flex items-center gap-4 text-muted-foreground">
+        {/* <div className="flex items-center gap-4 text-muted-foreground">
           <Home className="w-4 h-4" />
           <span className="text-sm">
             {building.apartmentTypes.map((apt) => apt.type).join(", ")}
           </span>
-        </div>
+        </div> */}
       </CardHeader>
 
       <CardContent>
@@ -71,24 +71,24 @@ const BuildingCard = ({ building }: BuildingCardProps) => {
                       {apt.surface}m²
                     </span>
                   </div>
-                  <span className="text-sm font-medium text-primary">
+                  {/* <span className="text-sm font-medium text-primary">
                     {`€${apt.price.toLocaleString()}${apt.vat ? " + TVA" : null}`}
-                  </span>
+                  </span> */}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="flex justify-between items-center pt-4 border-t">
-            <div>
+          <div className="flex pt-4 gap-3 border-t">
+            {/* <div>
               <p className="text-xs text-muted-foreground mb-1">Preț de la</p>
               <span className="text-2xl font-playfair font-bold text-primary">
                 {priceRange}
               </span>
-            </div>
+            </div> */}
 
-            <Link to={`/apartamente/${building.id}`}>
-              <Button className="btn-premium">Vezi Detalii</Button>
+            <Link to={`/apartamente/${building.id}`} className="flex-1">
+              <Button className="btn-premium w-full">Vezi Detalii</Button>
             </Link>
           </div>
         </div>
