@@ -52,8 +52,8 @@ export const buildings: Building[] = [
         vat: true,
       },
     ],
-    mainImage: building1Image1,
-    images: [building1Image1, building1Image2],
+    mainImage: building1Image2,
+    images: [building1Image2, building1Image1],
     apartmentPlans: [building1Image3, building1Image4, building1Image5],
     planTitles: [
       "Apartament 2 Camere",
