@@ -67,30 +67,25 @@ const PhotoGallery = ({
           {images.map((image, index) => (
             <CarouselItem
               key={index}
-              className={`${floorPlans ? "border-none" : null}`}
+              className={`${floorPlans ? "border-none shadow-none" : null}`}
             >
-              <Card className={cn(floorPlans ? "border-none shadow-none" : "")}>
+              <Card
+                className={cn(floorPlans ? "border-none shadow-none" : null)}
+              >
                 <CardContent className="p-0">
                   <div
-                    className={cn(
-                      "aspect-video rounded-lg flex flex-col", // make it flex column
-                      floorPlans ? "" : "overflow-hidden",
-                    )}
+                    className={`aspect-video rounded-lg ${floorPlans ? "" : "overflow-hidden"}`}
                   >
                     {titles && (
                       <div className="pt-5 text-center text-xl text-muted-foreground">
                         {`Plan ${titles[index]}`}
                       </div>
                     )}
-                    <div className="flex-1 flex items-center justify-center">
-                      {" "}
-                      {/* center image */}
-                      <img
-                        src={image}
-                        alt={`${alt} ${index + 1}`}
-                        className={imageClassName}
-                      />
-                    </div>
+                    <img
+                      src={image}
+                      alt={`${alt} ${index + 1}`}
+                      className={imageClassName}
+                    />
                   </div>
                 </CardContent>
               </Card>
