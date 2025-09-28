@@ -9,7 +9,7 @@ export const buildings: Building[] = [
   {
     id: "bloc-boutique-central",
     name: "Apartamente Premium de Vânzare - Bloc Boutique, Central",
-    location: "Ultracentral, lângă Piața Centrală",
+    location: "Lângă Piața Centrală",
     description: `Proiect exclusivist, cu doar 6 apartamente, conceput ca un rezidențial exclusiv, cu arhitectură modernă și elegantă. Poziționat lângă Piața Centrală și bulevardul Calea București, la câteva minute de centrul orașului, reprezintă alegerea ideală pentru cei care apreciază confortul unei locații centrale.
       
       Construcția este realizată cu materiale și soluții de calitate superioară, care garantează performanță și finisaje impecabile, fără compromisuri în execuție.
