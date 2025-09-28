@@ -20,7 +20,7 @@ const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
       </div>
 
       <CardHeader className="pb-4">
-        <div className="flex justify-between items-start mb-2">
+        {/* <div className="flex justify-between items-start mb-2">
           <h3 className="text-luxury text-2xl">{apartment.type}</h3>
           <Badge
             variant="secondary"
@@ -28,14 +28,12 @@ const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
           >
             Floor {apartment.floor}
           </Badge>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-4 text-muted-foreground">
           <span>{apartment.surface}m²</span>
           <span>•</span>
           <span>{apartment.rooms} rooms</span>
-          <span>•</span>
-          <span>{apartment.orientation}</span>
         </div>
       </CardHeader>
 

@@ -30,7 +30,7 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="#terenuri">
+          <Link to="#apartamente">
             <Button className="btn-premium text-lg px-10 py-4">
               Descoperă Opțiuni
             </Button>

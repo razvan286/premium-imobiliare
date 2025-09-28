@@ -6,6 +6,7 @@ const WhatsApp = (props: React.SVGProps<SVGSVGElement>) => (
     width="150"
     height="150"
     viewBox="0 0 48 48"
+    className="w-7 h-7"
   >
     <path
       fill="#fff"

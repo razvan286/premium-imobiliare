@@ -24,16 +24,22 @@ const NavBar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <Link
-              to={isHome ? "#terenuri" : "/#terenuri"}
+              to={"/apartamente#apartamente"}
+              className="text-foreground hover:text-accent transition-colors"
+            >
+              Apartamente
+            </Link>
+            <Link
+              to={"/terenuri#terenuri"}
               className="text-foreground hover:text-accent transition-colors"
             >
               Terenuri
             </Link>
             <Link
-              to={isHome ? "#apartamente" : "/#apartamente"}
+              to={"/spatii#spatii"}
               className="text-foreground hover:text-accent transition-colors"
             >
-              Apartamente
+              Spații
             </Link>
             <Link to={isHome ? "#contact" : "/#contact"}>
               <Button className="btn-premium">Contact</Button>
@@ -55,6 +61,13 @@ const NavBar = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-accent">
             <div className="flex flex-col space-y-4 pt-4">
               <Link
+                to={"/apartamente#apartamente"}
+                className="text-foreground hover:text-accent transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Apartamente
+              </Link>
+              <Link
                 to={isHome ? "#terenuri" : "/#terenuri"}
                 className="text-foreground hover:text-accent transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -62,11 +75,11 @@ const NavBar = () => {
                 Terenuri
               </Link>
               <Link
-                to={isHome ? "#apartamente" : "/#apartamente"}
+                to={isHome ? "#spatii" : "/#spatii"}
                 className="text-foreground hover:text-accent transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Apartamente
+                Spații
               </Link>
               <Link to={isHome ? "#contact" : "/#contact"}>
                 <Button

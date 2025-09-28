@@ -40,16 +40,22 @@ const Footer = () => {
             </h4>
             <div className="space-y-2">
               <Link
-                to={isHome ? "#terenuri" : "/#terenuri"}
+                to={"/apartamente#apartamente"}
+                className="block text-primary-foreground/80 hover:text-accent transition-colors"
+              >
+                Apartamente
+              </Link>
+              <Link
+                to={"/terenuri#terenuri"}
                 className="block text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 Terenuri
               </Link>
               <Link
-                to={isHome ? "#apartamente" : "/#apartamente"}
+                to={"/spatii#spatii"}
                 className="block text-primary-foreground/80 hover:text-accent transition-colors"
               >
-                Apartamente
+                Spații
               </Link>
               <Link
                 to={isHome ? "#contact" : "/#contact"}

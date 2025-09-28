@@ -14,12 +14,16 @@ interface PhotoGalleryProps {
   images: string[];
   alt?: string;
   className?: string;
+  floorPlans?: boolean;
+  titles?: string[];
 }
 
 const PhotoGallery = ({
   images,
   alt = "Galerie",
   className,
+  floorPlans = false,
+  titles,
 }: PhotoGalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [api, setApi] = useState<CarouselApi>();
@@ -51,22 +55,36 @@ const PhotoGallery = ({
       </div>
     );
   }
-
+  // Set classname for floor plan gallery or normal image
+  const imageClassName = floorPlans
+    ? "w-full max-w-2xl mx-auto"
+    : "w-full h-full object-cover hover:scale-105 transition-transform duration-500";
   return (
     <div className={cn("w-full space-y-4", className)}>
       {/* Main Carousel */}
       <Carousel className="w-full" setApi={setApi}>
         <CarouselContent>
           {images.map((image, index) => (
-            <CarouselItem key={index}>
-              <Card>
+            <CarouselItem
+              key={index}
+              className={`${floorPlans ? "border-none shadow-none" : null}`}
+            >
+              <Card
+                className={cn(floorPlans ? "border-none shadow-none" : null)}
+              >
                 <CardContent className="p-0">
-                  <div className="aspect-video rounded-lg overflow-hidden">
+                  <div
+                    className={`aspect-video rounded-lg ${floorPlans ? "" : "overflow-hidden"}`}
+                  >
+                    {titles && (
+                      <div className="pt-5 text-center text-xl text-muted-foreground">
+                        {`Plan ${titles[index]}`}
+                      </div>
+                    )}
                     <img
                       src={image}
                       alt={`${alt} ${index + 1}`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      // onClick={() => setSelectedIndex(index)}
+                      className={imageClassName}
                     />
                   </div>
                 </CardContent>
