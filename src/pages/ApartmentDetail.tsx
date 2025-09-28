@@ -54,10 +54,6 @@ const ApartmentDetail = () => {
               <Layers className="w-5 h-5" />
               <span>Floor {apartment.floor}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Wind className="w-5 h-5" />
-              <span>{apartment.orientation}</span>
-            </div>
           </div>
         </div>
 
@@ -170,11 +166,6 @@ const ApartmentDetail = () => {
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Floor</span>
                     <span className="font-medium">{apartment.floor}</span>
-                  </div>
-
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Orientation</span>
-                    <span className="font-medium">{apartment.orientation}</span>
                   </div>
 
                   <div className="flex justify-between">

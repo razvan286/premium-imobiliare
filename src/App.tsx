@@ -5,13 +5,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "@/pages";
 import NotFound from "@/pages/NotFound";
-import ApartmentDetail from "@/pages/ApartmentDetail";
 import NavBar from "./components/NavBar";
 import LandPlotDetail from "./pages/LandPlotDetail";
 import Footer from "./components/Footer";
 
 import ScrollToTop from "./components/ScrollToTop";
 import RetailSpaceDetail from "./pages/RetailSpaceDetail";
+import BuildingDetail from "./pages/BuildingDetail";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/apartamente/:id" element={<ApartmentDetail />} />
+          <Route path="/apartamente/:id" element={<BuildingDetail />} />
           <Route path="/terenuri/:id" element={<LandPlotDetail />} />
           <Route path="/spatii/:id" element={<RetailSpaceDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

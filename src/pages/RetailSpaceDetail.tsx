@@ -93,7 +93,7 @@ const RetailSpaceDetail = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button
-                    onClick={() => handleContactWhatsApp(retailSpace)}
+                    onClick={() => handleContactWhatsApp()}
                     className="w-full bg-whatsapp-dark hover:bg-whatsapp"
                   >
                     <WhatsApp className="w-5 h-5 mr-2" />

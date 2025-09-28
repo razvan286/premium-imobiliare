@@ -5,10 +5,9 @@ import { retailSpaces } from "@/data/retailSpaces";
 import LandPlotCard from "@/components/LandPlotCard";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import WhatsApp from "@/components/ui/icons";
-import { handleContactWhatsApp } from "@/lib/utils";
 import RetailSpaceCard from "@/components/RetailSpaceCard";
+import { buildings } from "@/data/buildings";
+import BuildingCard from "@/components/BuildingCard";
 
 const Index = () => {
   const { hash } = useLocation();
@@ -50,9 +49,14 @@ const Index = () => {
             <h2 className="text-5xl font-playfair font-bold text-luxury mb-6">
               Apartamente
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Disponibile în curând.
+            <p className="text-l text-muted-foreground mx-auto leading-relaxed">
+              Descoperă apartamente de vânzare.
             </p>
+          </div>
+          <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-8">
+            {buildings.map((building) => (
+              <BuildingCard key={building.id} building={building} />
+            ))}
           </div>
         </div>
       </section>
@@ -69,7 +73,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-8">
             {landPlots.map((landPlot) => (
               <LandPlotCard key={landPlot.id} landPlot={landPlot} />
             ))}
@@ -89,7 +93,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-8">
             {retailSpaces.map((retailSpace) => (
               <RetailSpaceCard key={retailSpace.id} retailSpace={retailSpace} />
             ))}
