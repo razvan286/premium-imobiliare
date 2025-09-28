@@ -78,7 +78,7 @@ const RetailSpaceDetail = () => {
               <Card className="card-premium ">
                 <CardHeader>
                   <div className="text-center">
-                    {/* <div className="text-3xl font-bold text-primary mb-2">
+                    {/*   `<div className="text-3xl font-bold text-primary mb-2">
                       €{retailSpace.price.toLocaleString()}{retailSpace.vat ? " + TVA" : null}
                     </div> */}
                     <span className="text-3xl font-extrabold">

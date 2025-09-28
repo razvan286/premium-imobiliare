@@ -29,28 +29,28 @@ const BuildingDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-gradient-subtle sm:p-0 ">
       {/* Main Content */}
       <div className="container mx-auto px-4 pb-12">
         <div className="grid lg:grid-cols-3 gap-8 pb-10">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 overflow-x-hidden">
             {/* Photo Gallery */}
-            <Card className="card-premium mt-10 sm:p-3">
+            <Card className="card-premium mt-10">
               <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <CardTitle className="text-2xl font-playfair text-primary">
+                <div className="flex justify-between items-start gap-4">
+                  <div className="flex-1 min-w-0">
+                    <CardTitle className="font-playfair text-primary text-lg md:text-2xl">
                       {building.name}
                     </CardTitle>
-                    <div className="flex items-center text-muted-foreground">
-                      <MapPin className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-muted-foreground text-sm md:text-lg">
+                      <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
                       {building.location}
                     </div>
                   </div>
                   <Badge
                     variant="secondary"
-                    className="bg-accent/10 text-accent font-medium"
+                    className="bg-accent/10 text-accent font-medium whitespace-nowrap flex-shrink-0 text-sm md:text-md"
                   >
                     {building.totalApartments} apartamente
                   </Badge>
@@ -60,29 +60,38 @@ const BuildingDetail = () => {
                 <PhotoGallery
                   images={building.images}
                   alt={building.name}
-                  className="mb-10 sm:p-2"
+                  className="mb-14 sm:p-2"
                 />
-                <CardTitle>Descriere</CardTitle>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {building.description}
-                </p>
 
-                <div className="space-y-4">
-                  <CardTitle>Dotări și Caracteristici</CardTitle>
+                <div className="space-y-6">
+                  <CardTitle className="text-lg md:text-2xl">
+                    Dotări și Caracteristici
+                  </CardTitle>
                   <div className="grid gap-3">
                     {building.features.map((feature, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg"
-                      >
+                      <div key={index} className="flex items-start gap-3 py-3">
                         <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          {feature}
-                        </span>
+                        <span className="text-sm md:text-lg">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+
+            {/* Apartment floor plans */}
+            <Card className="card-premium mt-10 sm:p-3">
+              <CardHeader>
+                <CardTitle>Planuri Apartamente</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <PhotoGallery
+                  images={building.apartmentPlans}
+                  alt={building.name}
+                  className="mb-1 sm:p-2"
+                  floorPlans
+                  titles={building.planTitles}
+                />
               </CardContent>
             </Card>
 
@@ -114,7 +123,7 @@ const BuildingDetail = () => {
                           </div>
 
                           <div className="text-right">
-                            <div className="text-3xl font-playfair font-bold text-primary mb-2">
+                            <div className="text-xl md:text-3xl font-playfair font-bold text-primary mb-2">
                               {`€${apartment.price.toLocaleString()}${apartment.vat ? " + TVA" : null}`}
                             </div>
                           </div>
@@ -123,22 +132,6 @@ const BuildingDetail = () => {
                     </Card>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Apartment floor plans */}
-            <Card className="card-premium mt-10 sm:p-3">
-              <CardHeader>
-                <CardTitle>Planuri Apartamente</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <PhotoGallery
-                  images={building.apartmentPlans}
-                  alt={building.name}
-                  className="mb-1 sm:p-2"
-                  floorPlans
-                  titles={building.planTitles}
-                />
               </CardContent>
             </Card>
           </div>

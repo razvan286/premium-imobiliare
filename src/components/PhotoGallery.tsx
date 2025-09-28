@@ -65,11 +65,16 @@ const PhotoGallery = ({
       <Carousel className="w-full" setApi={setApi}>
         <CarouselContent>
           {images.map((image, index) => (
-            <CarouselItem key={index}>
-              <Card>
+            <CarouselItem
+              key={index}
+              className={`${floorPlans ? "border-none shadow-none" : null}`}
+            >
+              <Card
+                className={cn(floorPlans ? "border-none shadow-none" : null)}
+              >
                 <CardContent className="p-0">
                   <div
-                    className={`aspect-video rounded-lg ${floorPlans ? "shadow-soft" : "overflow-hidden"}`}
+                    className={`aspect-video rounded-lg ${floorPlans ? "" : "overflow-hidden"}`}
                   >
                     {titles && (
                       <div className="pt-5 text-center text-xl text-muted-foreground">

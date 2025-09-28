@@ -49,7 +49,7 @@ const Index = () => {
             <h2 className="text-5xl font-playfair font-bold text-luxury mb-6">
               Apartamente
             </h2>
-            <p className="text-l text-muted-foreground mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground mx-auto leading-relaxed">
               Descoperă apartamente de vânzare.
             </p>
           </div>

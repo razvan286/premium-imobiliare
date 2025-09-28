@@ -24,19 +24,19 @@ const NavBar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <Link
-              to={isHome ? "#apartamente" : "/#apartamente"}
+              to={"/apartamente#apartamente"}
               className="text-foreground hover:text-accent transition-colors"
             >
               Apartamente
             </Link>
             <Link
-              to={isHome ? "#terenuri" : "/#terenuri"}
+              to={"/terenuri#terenuri"}
               className="text-foreground hover:text-accent transition-colors"
             >
               Terenuri
             </Link>
             <Link
-              to={isHome ? "#spatii" : "/#spatii"}
+              to={"/spatii#spatii"}
               className="text-foreground hover:text-accent transition-colors"
             >
               Spații
@@ -61,7 +61,7 @@ const NavBar = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-accent">
             <div className="flex flex-col space-y-4 pt-4">
               <Link
-                to={isHome ? "#apartamente" : "/#apartamente"}
+                to={"/apartamente#apartamente"}
                 className="text-foreground hover:text-accent transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
