@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import RetailSpaceDetail from "./pages/RetailSpaceDetail";
 import BuildingDetail from "./pages/BuildingDetail";
+import Apartments from "./pages/Apartments";
+import LandPlots from "./pages/LandPlots";
+import RetailSpaces from "./pages/RetailSpaces";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/apartamente" element={<Apartments />} />
+          <Route path="/terenuri" element={<LandPlots />} />
+          <Route path="/spatii" element={<RetailSpaces />} />
           <Route path="/apartamente/:id" element={<BuildingDetail />} />
           <Route path="/terenuri/:id" element={<LandPlotDetail />} />
           <Route path="/spatii/:id" element={<RetailSpaceDetail />} />
