@@ -8,23 +8,26 @@ import building1Image5 from "@/assets/bloc-boutique/4-camere-plan.jpg";
 export const buildings: Building[] = [
   {
     id: "bloc-boutique-central",
-    name: "Bloc Boutique Central",
+    name: "Apartamente Premium de Vânzare - Bloc Boutique, Central",
     location: "Ultracentral, lângă Piața Centrală",
-    description:
-      "Apartamente premium într-un bloc boutique, ultracentral. Proiect exclusivist, cu doar 6 apartamente, conceput ca un rezidențial exclusiv, cu arhitectură modernă și elegantă. Poziționat lângă Piața Centrală și bulevardul Calea București, la câteva minute de centrul orașului, reprezintă alegerea ideală pentru cei care apreciază confortul unei locații centrale. Construcția este realizată cu materiale și soluții de top, ce asigură calitate și performanță superioară, fără compromisuri în privința detaliilor și a execuției.",
+    description: `Proiect exclusivist, cu doar 6 apartamente, conceput ca un rezidențial exclusiv, cu arhitectură modernă și elegantă. Poziționat lângă Piața Centrală și bulevardul Calea București, la câteva minute de centrul orașului, reprezintă alegerea ideală pentru cei care apreciază confortul unei locații centrale.
+      
+      Construcția este realizată cu materiale și soluții de calitate superioară, care garantează performanță și finisaje impecabile, fără compromisuri în execuție.
+      `,
     features: [
-      "Înălțime utilă 3 metri – apartamente spațioase, luminoase și elegante",
-      "Zidărie perimetrală BCA Ytong 30 cm, termoizolată cu sistem complet Caparol",
-      "Compartimentări interioare FIBRAN (Italia) – gips natural, planeitate perfectă",
-      "Pereți armați cu plasă din fibră de sticlă, finisați cu tencuială fină pe bază de gips",
-      "Tavane Knauf din gips-carton verde, cu strat de vată minerală antifonică",
-      "Încălzire prin pardoseală Uponor și centrală termică proprie Viessmann",
-      "Trasee pentru aer condiționat integrate în toate camerele",
-      "Precadre termoizolante Thermo Green pentru tâmplăria exterioară",
-      "Tâmplărie premium din aluminiu - Alumil",
-      "Ferestre generoase, care oferă un aport excelent de lumină naturală",
-      "Finisaje interioare premium: parchet de calitate, plăci ceramice",
-      "Lift de ultimă generație, acces securizat și locuri de parcare generoase",
+      "Înălțime utilă 3 metri - apartamente spațioase, luminoase și elegante",
+      "Zidărie perimetrală din BCA Ytong 30 cm, termoizolată cu sistem complet Caparol (polistiren grafitat Dalmatina) cu două straturi de plasă de armare, pentru rezistență și eficiență energetică.",
+      "Compartimentări interioare din blocuri de zidărie din gips natural FIBRAN (Italia), caracterizate prin planeitate perfectă, izolare fonică superioară și proprietăți care asigură un climat interior sănătos.",
+      "Pereți armați cu plasă din fibră de sticlă și finisați cu tencuială fină pe bază de gips - suprafețe netede, uniforme și rezistente în timp.",
+      "Tavane Knauf din gips-carton verde, cu strat de vată minerală pentru izolare fonică și confort termic.",
+      "Încălzire prin pardoseală Uponor și centrală termică individuală Viessmann în fiecare apartament.",
+      "Trasee pentru aer condiționat integrate în toate camerele, pregătite pentru montarea unităților interioare și exterioare.",
+      "Precadre termoizolante Thermo Green montate la golurile pentru tâmplăria exterioară - izolare termică și fonică superioară.",
+      "Tâmplărie premium din aluminiu, marca Alumil - montată la parter, urmează la toate nivelurile.",
+      "Ferestre generoase, cu aport excelent de lumină naturală și deschidere amplă spre exterior.",
+      "Finisaje interioare atent selecționate - parchet, plăci ceramice de calitate, uși cu design modern și obiecte sanitare elegante.",
+      "Lift de ultimă generație și acces securizat.",
+      "Locuri de parcare generoase, disponibile spre achiziție în curtea interioară.",
     ],
     apartmentTypes: [
       {

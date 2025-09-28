@@ -30,7 +30,7 @@ const BuildingCard = ({ building }: BuildingCardProps) => {
           <h3 className="text-luxury text-2xl">{building.name}</h3>
           <Badge
             variant="secondary"
-            className="bg-accent/10 text-accent font-medium"
+            className="bg-accent/10 text-accent font-medium whitespace-nowrap flex-shrink-0 text-sm md:text-md"
           >
             {building.totalApartments} apartamente
           </Badge>
@@ -51,7 +51,7 @@ const BuildingCard = ({ building }: BuildingCardProps) => {
 
       <CardContent>
         <div className="space-y-4">
-          <p className="text-muted-foreground text-sm line-clamp-3">
+          <p className="text-muted-foreground text-sm line-clamp-10 whitespace-pre-line">
             {building.description}
           </p>
 
