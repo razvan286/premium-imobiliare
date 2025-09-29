@@ -2,6 +2,7 @@ import { RetailSpace } from "@/types/retailSpace";
 import retailSpace1Image1 from "@/assets/spatiu-medical-1/foto1.jpg";
 import retailSpace1Image2 from "@/assets/spatiu-medical-1/foto2.jpg";
 import retailSpace2Image1 from "@/assets/spatiu-medical-2/foto1.jpg";
+import fotoFatada from "@/assets/bloc-boutique/foto-fatada.jpg";
 
 export const retailSpaces: RetailSpace[] = [
   {
@@ -13,9 +14,10 @@ export const retailSpaces: RetailSpace[] = [
     vat: true,
     location: "Vecinătate a Pieței Centrale și bvd. Calea București",
     mainImage: retailSpace1Image1,
+    images: [fotoFatada],
     floorPlans: [retailSpace1Image1, retailSpace1Image2],
     // matching indexes
-    planTitles: ["Parter", "Demisol"],
+    planTitles: ["Plan Parter", "Plan Demisol"],
     description: `Se oferă spre vânzare un spațiu medical cu destinație conformă Autorizației de Construire. Este ideal pentru cabinete medicale sau pentru o micro-clinică specializată.  
 
 Localizarea este centrală, în imediata vecinătate a Pieței Centrale și a bulevardului Calea București, la mică distanță de centrul orașului. Poziția oferă vizibilitate excelentă și acces facil – aspecte esențiale pentru desfășurarea activităților medicale.  
@@ -37,6 +39,7 @@ Este prevăzut cu centrală termică proprie și sistem de încălzire în pardo
     vat: true,
     location: "Vecinătate a Pieței Centrale și bvd. Calea București",
     mainImage: retailSpace2Image1,
+    images: [fotoFatada],
     floorPlans: [retailSpace2Image1],
     description: `Se oferă spre vânzare un spațiu medical, cu destinația certificată prin Autorizația de Construire și aviz DSP. Este ideal pentru cabinete medicale sau pentru o micro-clinică specializată.  
 
