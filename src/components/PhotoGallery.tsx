@@ -78,7 +78,7 @@ const PhotoGallery = ({
                   >
                     {titles && (
                       <div className="pt-5 text-center text-xl text-muted-foreground">
-                        {`Plan ${titles[index]}`}
+                        {`${titles[index]}`}
                       </div>
                     )}
                     <img
