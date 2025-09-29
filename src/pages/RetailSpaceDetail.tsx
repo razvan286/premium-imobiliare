@@ -47,6 +47,21 @@ const RetailSpaceDetail = () => {
               </CardHeader>
               <CardContent>
                 <PhotoGallery
+                  images={retailSpace.images}
+                  alt={retailSpace.title}
+                  className="mb-1 sm:p-2"
+                />
+              </CardContent>
+            </Card>
+
+            <Card className="card-premium">
+              <CardHeader>
+                <CardTitle className="font-playfair text-primary">
+                  {retailSpace.floorPlans.length == 1 ? "Plan" : "Planuri"}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <PhotoGallery
                   images={retailSpace.floorPlans}
                   alt={retailSpace.title}
                   className="mb-1 sm:p-2"
