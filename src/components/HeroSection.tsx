@@ -25,8 +25,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
-          Descoperă apartamente, terenuri și spații de închiriat disponible mai
-          jos.
+          Descoperă apartamente, terenuri și spații disponible mai jos.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
