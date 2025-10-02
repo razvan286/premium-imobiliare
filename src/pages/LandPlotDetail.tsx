@@ -144,26 +144,6 @@ const LandPlotDetail = () => {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Oportunities */}
-
-            <Card className="card-premium">
-              <CardHeader>
-                <CardTitle className="font-playfair text-primary">
-                  Destinații posibile
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {landPlot.oportunities.map((oport, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full shrink-0"></div>
-                      <span className="text-foreground">{oport}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Sidebar */}

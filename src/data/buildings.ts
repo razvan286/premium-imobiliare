@@ -3,13 +3,15 @@ import building1Image1 from "@/assets/bloc-boutique/randare-fatada.jpg";
 import building1Image2 from "@/assets/bloc-boutique/foto-fatada.jpg";
 import building1Image3 from "@/assets/bloc-boutique/2-camere-plan.jpg";
 import building1Image4 from "@/assets/bloc-boutique/3-camere-plan.jpg";
-import building1Image5 from "@/assets/bloc-boutique/4-camere-plan.jpg";
+import building1Image5 from "@/assets/bloc-boutique/4-camere-plan.jpeg";
+import locationGooglMaps from "@/assets/bloc-boutique/localizare-google-maps.jpeg";
 
 export const buildings: Building[] = [
   {
     id: "bloc-boutique-central",
     name: "Apartamente Premium de Vânzare - Bloc Boutique, Central",
-    location: "Lângă Piața Centrală",
+    location:
+      "Str. Nicolae Bălcescu (intersecție cu str. Vasile Alecsandri), lângă Piața Centrală",
     description: `Proiect exclusivist, cu doar 6 apartamente, conceput ca un rezidențial exclusiv, cu arhitectură modernă și elegantă. Poziționat lângă Piața Centrală și bulevardul Calea București, la câteva minute de centrul orașului, reprezintă alegerea ideală pentru cei care apreciază confortul unei locații centrale.
       
       Construcția este realizată cu materiale și soluții de calitate superioară, care garantează performanță și finisaje impecabile, fără compromisuri în execuție.
@@ -56,7 +58,7 @@ export const buildings: Building[] = [
       },
     ],
     mainImage: building1Image2,
-    images: [building1Image2, building1Image1],
+    images: [building1Image2, building1Image1, locationGooglMaps],
     apartmentPlans: [building1Image3, building1Image4, building1Image5],
     planTitles: [
       "Apartament 2 Camere",

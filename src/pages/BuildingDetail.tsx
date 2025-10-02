@@ -65,7 +65,7 @@ const BuildingDetail = () => {
 
                 <div className="space-y-6">
                   <CardTitle className="text-lg md:text-2xl">
-                    Dotări și Caracteristici
+                    Detalii Constructive și Dotări
                   </CardTitle>
                   <div className="grid gap-3">
                     {building.features.map((feature, index) => (
@@ -99,7 +99,7 @@ const BuildingDetail = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair font-bold">
-                  Apartamente Disponibile
+                  Apartamente Disponibile - Prețuri
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -142,20 +142,9 @@ const BuildingDetail = () => {
             <div className="sticky top-28">
               <Card className="card-premium ">
                 <CardHeader>
-                  <div className="text-center">
-                    <div className="text-2xl font-playfair font-bold text-primary mb-1">
-                      Preț de la €
-                      {Math.min(
-                        ...building.apartmentTypes.map((apt) => apt.price),
-                      ).toLocaleString()}
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      până la €
-                      {Math.max(
-                        ...building.apartmentTypes.map((apt) => apt.price),
-                      ).toLocaleString()}
-                    </div>
-                  </div>
+                  <CardTitle className="font-playfair text-primary text-center">
+                    Contact
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button
