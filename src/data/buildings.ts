@@ -1,7 +1,6 @@
 import { Building } from "@/types/building";
 import building1Image1 from "@/assets/bloc-boutique/randare-fatada.jpg";
 import building1Image2 from "@/assets/bloc-boutique/foto-fatada.jpg";
-import building1Image3 from "@/assets/bloc-boutique/2-camere-plan.jpg";
 import building1Image4 from "@/assets/bloc-boutique/3-camere-plan.jpg";
 import building1Image5 from "@/assets/bloc-boutique/4-camere-plan.jpeg";
 import locationGooglMaps from "@/assets/bloc-boutique/localizare-google-maps.jpeg";
@@ -33,14 +32,6 @@ export const buildings: Building[] = [
     ],
     apartmentTypes: [
       {
-        id: "2-camere",
-        type: "2 Camere",
-        surface: 62,
-        rooms: 2,
-        price: 124000,
-        vat: true,
-      },
-      {
         id: "3-camere",
         type: "3 Camere",
         surface: 83.4,
@@ -59,12 +50,8 @@ export const buildings: Building[] = [
     ],
     mainImage: building1Image2,
     images: [building1Image2, building1Image1, locationGooglMaps],
-    apartmentPlans: [building1Image3, building1Image4, building1Image5],
-    planTitles: [
-      "Apartament 2 Camere",
-      "Apartament 3 Camere",
-      "Apartament 4 Camere",
-    ],
+    apartmentPlans: [building1Image4, building1Image5],
+    planTitles: ["Apartament 3 Camere", "Apartament 4 Camere"],
     totalApartments: 6,
   },
 ];
